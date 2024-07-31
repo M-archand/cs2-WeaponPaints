@@ -167,9 +167,8 @@ public partial class WeaponPaints : BasePlugin, IPluginConfig<WeaponPaintsConfig
 
 	public WeaponPaintsConfig Config { get; set; } = new();
 	public override string ModuleAuthor => "Nereziel & daffyy";
-	public override string ModuleDescription => "Skin, gloves, agents and knife selector, standalone and web-based";
 	public override string ModuleName => "WeaponPaints";
-	public override string ModuleVersion => "2.5a";
+	public override string ModuleVersion => "v277";
 
 	public override void Load(bool hotReload)
 	{
@@ -264,8 +263,7 @@ public partial class WeaponPaints : BasePlugin, IPluginConfig<WeaponPaintsConfig
 		_localizer = Localizer;
 
 		Utility.Config = config;
-		Utility.ShowAd(ModuleVersion);
-		Task.Run(async () => await Utility.CheckVersion(ModuleVersion, Logger));
+
 	}
 
 	public override void Unload(bool hotReload)
